@@ -1,0 +1,4677 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Api description",
+    "version": "1.0",
+    "title": "Api Liga",
+    "termsOfService": "Terms of service",
+    "contact": {
+      "name": "Azedine Chillah",
+      "url": "facebook.com",
+      "email": "Azedine.Chillah.bxl@gmail.com"
+    },
+    "license": {
+      "name": "License of API",
+      "url": "http://localhost:8090/"
+    }
+  },
+  "host": "localhost:8090",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "League Entity",
+      "description": "Simple Jpa Repository"
+    },
+    {
+      "name": "Player Entity",
+      "description": "Player"
+    },
+    {
+      "name": "Team Entity",
+      "description": "Team"
+    },
+    {
+      "name": "Trainer Entity",
+      "description": "Trainer"
+    },
+    {
+      "name": "User Entity",
+      "description": "Simple Jpa Repository"
+    },
+    {
+      "name": "basic-error-controller",
+      "description": "Basic Error Controller"
+    },
+    {
+      "name": "league-controller",
+      "description": "League Controller"
+    },
+    {
+      "name": "player-controller",
+      "description": "Player Controller"
+    },
+    {
+      "name": "profile-controller",
+      "description": "Profile Controller"
+    },
+    {
+      "name": "team-controller",
+      "description": "Team Controller"
+    },
+    {
+      "name": "trainer-controller",
+      "description": "Trainer Controller"
+    },
+    {
+      "name": "user-controller",
+      "description": "User Controller"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "league-controller"
+        ],
+        "summary": "index",
+        "operationId": "indexUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/best-team": {
+      "get": {
+        "tags": [
+          "team-controller"
+        ],
+        "summary": "getBestTeam",
+        "operationId": "getBestTeamUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/error": {
+      "get": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "errorHtml",
+        "operationId": "errorHtmlUsingGET",
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "head": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "errorHtml",
+        "operationId": "errorHtmlUsingHEAD",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "errorHtml",
+        "operationId": "errorHtmlUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "errorHtml",
+        "operationId": "errorHtmlUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "errorHtml",
+        "operationId": "errorHtmlUsingDELETE",
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "options": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "errorHtml",
+        "operationId": "errorHtmlUsingOPTIONS",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "basic-error-controller"
+        ],
+        "summary": "errorHtml",
+        "operationId": "errorHtmlUsingPATCH",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "text/html"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/leagues": {
+      "get": {
+        "tags": [
+          "league-controller"
+        ],
+        "summary": "getLeague",
+        "operationId": "getLeagueUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "league-controller"
+        ],
+        "summary": "addLeague",
+        "operationId": "addLeagueUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "nombreEquipe",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "nomLigue",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "numJournee",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/leagues/{id}": {
+      "get": {
+        "tags": [
+          "League Entity"
+        ],
+        "summary": "findByIdLeague",
+        "operationId": "findByIdLeagueUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«League»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "league-controller"
+        ],
+        "summary": "updateLeague",
+        "operationId": "updateLeagueUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "league",
+            "description": "league",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/League"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "league-controller"
+        ],
+        "summary": "deleteLeague",
+        "operationId": "deleteLeagueUsingDELETE_1",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "League Entity"
+        ],
+        "summary": "saveLeague",
+        "operationId": "saveLeagueUsingPATCH",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/League"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«League»"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/login": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "theFakeLogin",
+        "operationId": "theFakeLoginUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "loginRequestModel",
+            "description": "loginRequestModel",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/players": {
+      "get": {
+        "tags": [
+          "player-controller"
+        ],
+        "summary": "getPlayer",
+        "operationId": "getPlayerUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "player-controller"
+        ],
+        "summary": "addPlayer",
+        "operationId": "addPlayerUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "ageJoueur",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "clubactuelleJoueur",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "equipe.id",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "equipe.ligue.nombreEquipe",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "equipe.ligue.nomLigue",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "equipe.ligue.numJournee",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "equipe.logo",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "equipe.nbrButs",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "equipe.nbrPoints",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "equipe.nbrTitres",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "equipe.nomEquipe",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "firstnameJoueur",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "lastnameJoueur",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "nbrbutsJoueur",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "posteJoueur",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/players/{id}": {
+      "get": {
+        "tags": [
+          "Player Entity"
+        ],
+        "summary": "findByIdPlayer",
+        "operationId": "findByIdPlayerUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Player»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "player-controller"
+        ],
+        "summary": "updatePlayer",
+        "operationId": "updatePlayerUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "player",
+            "description": "player",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Player"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "player-controller"
+        ],
+        "summary": "deletePlayer",
+        "operationId": "deletePlayerUsingDELETE_1",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Player Entity"
+        ],
+        "summary": "savePlayer",
+        "operationId": "savePlayerUsingPATCH",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Player"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Player»"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/players/{id}/equipe": {
+      "get": {
+        "tags": [
+          "Player Entity"
+        ],
+        "summary": "playerEquipe",
+        "operationId": "playerEquipeUsingGET",
+        "produces": [
+          "application/hal+json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Team»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Player Entity"
+        ],
+        "summary": "playerEquipe",
+        "operationId": "playerEquipeUsingPOST",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Team»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Player Entity"
+        ],
+        "summary": "playerEquipe",
+        "operationId": "playerEquipeUsingPUT",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Team»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Player Entity"
+        ],
+        "summary": "playerEquipe",
+        "operationId": "playerEquipeUsingDELETE",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Player Entity"
+        ],
+        "summary": "playerEquipe",
+        "operationId": "playerEquipeUsingPATCH",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Team»"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/profile": {
+      "get": {
+        "tags": [
+          "profile-controller"
+        ],
+        "summary": "listAllFormsOfMetadata",
+        "operationId": "listAllFormsOfMetadataUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RepresentationModel«object»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "options": {
+        "tags": [
+          "profile-controller"
+        ],
+        "summary": "profileOptions",
+        "operationId": "profileOptionsUsingOPTIONS",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/register": {
+      "get": {
+        "tags": [
+          "league-controller"
+        ],
+        "summary": "login",
+        "operationId": "loginUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/signup": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "addNewUser",
+        "operationId": "addNewUserUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "newUser",
+            "description": "newUser",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/strongest-team": {
+      "get": {
+        "tags": [
+          "team-controller"
+        ],
+        "summary": "getStrongestTeam",
+        "operationId": "getStrongestTeamUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/teams": {
+      "get": {
+        "tags": [
+          "team-controller"
+        ],
+        "summary": "getTeams",
+        "operationId": "getTeamsUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "team-controller"
+        ],
+        "summary": "addTeams",
+        "operationId": "addTeamsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "ligue.nombreEquipe",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "ligue.nomLigue",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ligue.numJournee",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "logo",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "nbrButs",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "nbrPoints",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "nbrTitres",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "nomEquipe",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/teams/search/findAllByOrderByNbrButsDesc": {
+      "get": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "findAllByOrderByNbrButsDescTeam",
+        "operationId": "findAllByOrderByNbrButsDescTeamUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CollectionModel«Team»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/teams/search/findAllByOrderByNbrPointsAsc": {
+      "get": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "findAllByOrderByNbrPointsAscTeam",
+        "operationId": "findAllByOrderByNbrPointsAscTeamUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CollectionModel«Team»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/teams/search/findAllByOrderByNbrPointsDesc": {
+      "get": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "findAllByOrderByNbrPointsDescTeam",
+        "operationId": "findAllByOrderByNbrPointsDescTeamUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CollectionModel«Team»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/teams/{id}": {
+      "get": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "findByIdTeam",
+        "operationId": "findByIdTeamUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Team»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "team-controller"
+        ],
+        "summary": "updateTeams",
+        "operationId": "updateTeamsUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "team",
+            "description": "team",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Team"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "team-controller"
+        ],
+        "summary": "deleteTeams",
+        "operationId": "deleteTeamsUsingDELETE",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "saveTeam",
+        "operationId": "saveTeamUsingPATCH",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Team"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Team»"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/teams/{id}/entraineur": {
+      "get": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamEntraineur",
+        "operationId": "teamEntraineurUsingGET",
+        "produces": [
+          "application/hal+json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Trainer»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamEntraineur",
+        "operationId": "teamEntraineurUsingPOST",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Trainer»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamEntraineur",
+        "operationId": "teamEntraineurUsingPUT",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Trainer»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamEntraineur",
+        "operationId": "teamEntraineurUsingDELETE",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamEntraineur",
+        "operationId": "teamEntraineurUsingPATCH",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Trainer»"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/teams/{id}/joueurs": {
+      "get": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamJoueurs",
+        "operationId": "teamJoueursUsingGET",
+        "produces": [
+          "application/hal+json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CollectionModel«Player»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamJoueurs",
+        "operationId": "teamJoueursUsingPOST",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CollectionModel«Player»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamJoueurs",
+        "operationId": "teamJoueursUsingPUT",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CollectionModel«Player»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamJoueurs",
+        "operationId": "teamJoueursUsingDELETE_1",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamJoueurs",
+        "operationId": "teamJoueursUsingPATCH",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CollectionModel«Player»"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/teams/{id}/joueurs/{playerId}": {
+      "get": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamJoueurs",
+        "operationId": "teamJoueursUsingGET_1",
+        "consumes": [
+          "application/hal+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "playerId",
+            "in": "path",
+            "description": "playerId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Player»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamJoueurs",
+        "operationId": "teamJoueursUsingDELETE",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "playerId",
+            "in": "path",
+            "description": "playerId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/teams/{id}/ligue": {
+      "get": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamLigue",
+        "operationId": "teamLigueUsingGET",
+        "produces": [
+          "application/hal+json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«League»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamLigue",
+        "operationId": "teamLigueUsingPOST",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«League»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamLigue",
+        "operationId": "teamLigueUsingPUT",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«League»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamLigue",
+        "operationId": "teamLigueUsingDELETE",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Team Entity"
+        ],
+        "summary": "teamLigue",
+        "operationId": "teamLigueUsingPATCH",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«League»"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/trainers": {
+      "get": {
+        "tags": [
+          "trainer-controller"
+        ],
+        "summary": "getTrainer",
+        "operationId": "getTrainerUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "trainer-controller"
+        ],
+        "summary": "addTrainer",
+        "operationId": "addTrainerUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "ageEntraineur",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "clubActuelleEntraineur",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "firstnameEntraineur",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "lastnameEntraineur",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/trainers/{id}": {
+      "get": {
+        "tags": [
+          "Trainer Entity"
+        ],
+        "summary": "findByIdTrainer",
+        "operationId": "findByIdTrainerUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Trainer»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "trainer-controller"
+        ],
+        "summary": "updateTrainers",
+        "operationId": "updateTrainersUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "trainer",
+            "description": "trainer",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Trainer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "trainer-controller"
+        ],
+        "summary": "deleteTrainer",
+        "operationId": "deleteTrainerUsingDELETE_1",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Trainer Entity"
+        ],
+        "summary": "saveTrainer",
+        "operationId": "saveTrainerUsingPATCH",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Trainer"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Trainer»"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/trainers/{id}/equipe": {
+      "get": {
+        "tags": [
+          "Trainer Entity"
+        ],
+        "summary": "trainerEquipe",
+        "operationId": "trainerEquipeUsingGET",
+        "produces": [
+          "application/hal+json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Team»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Trainer Entity"
+        ],
+        "summary": "trainerEquipe",
+        "operationId": "trainerEquipeUsingPOST",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Team»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Trainer Entity"
+        ],
+        "summary": "trainerEquipe",
+        "operationId": "trainerEquipeUsingPUT",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Team»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Trainer Entity"
+        ],
+        "summary": "trainerEquipe",
+        "operationId": "trainerEquipeUsingDELETE",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Trainer Entity"
+        ],
+        "summary": "trainerEquipe",
+        "operationId": "trainerEquipeUsingPATCH",
+        "consumes": [
+          "text/uri-list",
+          "application/x-spring-data-compact+json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«Team»"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/users": {
+      "get": {
+        "tags": [
+          "User Entity"
+        ],
+        "summary": "findAllUser",
+        "operationId": "findAllUserUsingGET",
+        "produces": [
+          "application/hal+json",
+          "application/json",
+          "application/x-spring-data-compact+json",
+          "text/uri-list"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "page",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "size",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "sort",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CollectionModel«User»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "User Entity"
+        ],
+        "summary": "saveUser",
+        "operationId": "saveUserUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«User»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/users/search/findByUsername": {
+      "get": {
+        "tags": [
+          "User Entity"
+        ],
+        "summary": "findByUsernameUser",
+        "operationId": "findByUsernameUserUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "description": "username",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«User»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "tags": [
+          "User Entity"
+        ],
+        "summary": "findByIdUser",
+        "operationId": "findByIdUserUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«User»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "User Entity"
+        ],
+        "summary": "saveUser",
+        "operationId": "saveUserUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«User»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "User Entity"
+        ],
+        "summary": "deleteUser",
+        "operationId": "deleteUserUsingDELETE",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "User Entity"
+        ],
+        "summary": "saveUser",
+        "operationId": "saveUserUsingPATCH",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EntityModel«User»"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    },
+    "/weakest-team": {
+      "get": {
+        "tags": [
+          "team-controller"
+        ],
+        "summary": "getWeakestTeam",
+        "operationId": "getWeakestTeamUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "JWT": [
+              "::"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "securityDefinitions": {
+    "JWT": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "definitions": {
+    "CollectionModel«League»": {
+      "type": "object",
+      "required": [
+        "_embedded",
+        "_links"
+      ],
+      "properties": {
+        "_embedded": {
+          "$ref": "#/definitions/EmbeddedCollection«League»"
+        },
+        "_links": {
+          "type": "object",
+          "description": "Link collection",
+          "additionalProperties": {
+            "$ref": "#/definitions/Link"
+          }
+        }
+      },
+      "title": "CollectionModel«League»",
+      "xml": {
+        "name": "entities",
+        "attribute": false,
+        "wrapped": false
+      },
+      "description": "Resources of League"
+    },
+    "CollectionModel«Player»": {
+      "type": "object",
+      "required": [
+        "_embedded",
+        "_links"
+      ],
+      "properties": {
+        "_embedded": {
+          "$ref": "#/definitions/EmbeddedCollection«Player»"
+        },
+        "_links": {
+          "type": "object",
+          "description": "Link collection",
+          "additionalProperties": {
+            "$ref": "#/definitions/Link"
+          }
+        }
+      },
+      "title": "CollectionModel«Player»",
+      "xml": {
+        "name": "entities",
+        "attribute": false,
+        "wrapped": false
+      },
+      "description": "Resources of Player"
+    },
+    "CollectionModel«Team»": {
+      "type": "object",
+      "required": [
+        "_embedded",
+        "_links"
+      ],
+      "properties": {
+        "_embedded": {
+          "$ref": "#/definitions/EmbeddedCollection«Team»"
+        },
+        "_links": {
+          "type": "object",
+          "description": "Link collection",
+          "additionalProperties": {
+            "$ref": "#/definitions/Link"
+          }
+        }
+      },
+      "title": "CollectionModel«Team»",
+      "xml": {
+        "name": "entities",
+        "attribute": false,
+        "wrapped": false
+      },
+      "description": "Resources of Team"
+    },
+    "CollectionModel«Trainer»": {
+      "type": "object",
+      "required": [
+        "_embedded",
+        "_links"
+      ],
+      "properties": {
+        "_embedded": {
+          "$ref": "#/definitions/EmbeddedCollection«Trainer»"
+        },
+        "_links": {
+          "type": "object",
+          "description": "Link collection",
+          "additionalProperties": {
+            "$ref": "#/definitions/Link"
+          }
+        }
+      },
+      "title": "CollectionModel«Trainer»",
+      "xml": {
+        "name": "entities",
+        "attribute": false,
+        "wrapped": false
+      },
+      "description": "Resources of Trainer"
+    },
+    "CollectionModel«User»": {
+      "type": "object",
+      "required": [
+        "_embedded",
+        "_links"
+      ],
+      "properties": {
+        "_embedded": {
+          "$ref": "#/definitions/EmbeddedCollection«User»"
+        },
+        "_links": {
+          "type": "object",
+          "description": "Link collection",
+          "additionalProperties": {
+            "$ref": "#/definitions/Link"
+          }
+        }
+      },
+      "title": "CollectionModel«User»",
+      "xml": {
+        "name": "entities",
+        "attribute": false,
+        "wrapped": false
+      },
+      "description": "Resources of User"
+    },
+    "EmbeddedCollection«League»": {
+      "type": "object",
+      "required": [
+        "leagues"
+      ],
+      "properties": {
+        "leagues": {
+          "type": "array",
+          "description": "Resource collection",
+          "items": {
+            "$ref": "#/definitions/League"
+          }
+        }
+      },
+      "title": "EmbeddedCollection«League»",
+      "xml": {
+        "name": "content",
+        "wrapped": true
+      },
+      "description": "Embedded collection of League"
+    },
+    "EmbeddedCollection«Player»": {
+      "type": "object",
+      "required": [
+        "players"
+      ],
+      "properties": {
+        "players": {
+          "type": "array",
+          "description": "Resource collection",
+          "items": {
+            "$ref": "#/definitions/Player"
+          }
+        }
+      },
+      "title": "EmbeddedCollection«Player»",
+      "xml": {
+        "name": "content",
+        "wrapped": true
+      },
+      "description": "Embedded collection of Player"
+    },
+    "EmbeddedCollection«Team»": {
+      "type": "object",
+      "required": [
+        "teams"
+      ],
+      "properties": {
+        "teams": {
+          "type": "array",
+          "description": "Resource collection",
+          "items": {
+            "$ref": "#/definitions/Team"
+          }
+        }
+      },
+      "title": "EmbeddedCollection«Team»",
+      "xml": {
+        "name": "content",
+        "wrapped": true
+      },
+      "description": "Embedded collection of Team"
+    },
+    "EmbeddedCollection«Trainer»": {
+      "type": "object",
+      "required": [
+        "trainers"
+      ],
+      "properties": {
+        "trainers": {
+          "type": "array",
+          "description": "Resource collection",
+          "items": {
+            "$ref": "#/definitions/Trainer"
+          }
+        }
+      },
+      "title": "EmbeddedCollection«Trainer»",
+      "xml": {
+        "name": "content",
+        "wrapped": true
+      },
+      "description": "Embedded collection of Trainer"
+    },
+    "EmbeddedCollection«User»": {
+      "type": "object",
+      "required": [
+        "users"
+      ],
+      "properties": {
+        "users": {
+          "type": "array",
+          "description": "Resource collection",
+          "items": {
+            "$ref": "#/definitions/User"
+          }
+        }
+      },
+      "title": "EmbeddedCollection«User»",
+      "xml": {
+        "name": "content",
+        "wrapped": true
+      },
+      "description": "Embedded collection of User"
+    },
+    "EntityModel«League»": {
+      "type": "object",
+      "properties": {
+        "links": {
+          "$ref": "#/definitions/Links"
+        },
+        "nomLigue": {
+          "type": "string"
+        },
+        "nombreEquipe": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "numJournee": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "EntityModel«League»"
+    },
+    "EntityModel«Player»": {
+      "type": "object",
+      "properties": {
+        "ageJoueur": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "clubactuelleJoueur": {
+          "type": "string"
+        },
+        "equipe": {
+          "$ref": "#/definitions/Team"
+        },
+        "firstnameJoueur": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "lastnameJoueur": {
+          "type": "string"
+        },
+        "links": {
+          "$ref": "#/definitions/Links"
+        },
+        "nbrbutsJoueur": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "posteJoueur": {
+          "type": "string"
+        }
+      },
+      "title": "EntityModel«Player»"
+    },
+    "EntityModel«Team»": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ligue": {
+          "$ref": "#/definitions/League"
+        },
+        "links": {
+          "$ref": "#/definitions/Links"
+        },
+        "logo": {
+          "type": "string"
+        },
+        "nbrButs": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nbrPoints": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nbrTitres": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nomEquipe": {
+          "type": "string"
+        }
+      },
+      "title": "EntityModel«Team»"
+    },
+    "EntityModel«Trainer»": {
+      "type": "object",
+      "properties": {
+        "ageEntraineur": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "clubActuelleEntraineur": {
+          "type": "string"
+        },
+        "firstnameEntraineur": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "lastnameEntraineur": {
+          "type": "string"
+        },
+        "links": {
+          "$ref": "#/definitions/Links"
+        }
+      },
+      "title": "EntityModel«Trainer»"
+    },
+    "EntityModel«User»": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "links": {
+          "$ref": "#/definitions/Links"
+        },
+        "password": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        }
+      },
+      "title": "EntityModel«User»"
+    },
+    "League": {
+      "type": "object",
+      "properties": {
+        "nomLigue": {
+          "type": "string"
+        },
+        "nombreEquipe": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "numJournee": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "League"
+    },
+    "Link": {
+      "type": "object",
+      "properties": {
+        "deprecation": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        },
+        "hreflang": {
+          "type": "string"
+        },
+        "media": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "profile": {
+          "type": "string"
+        },
+        "rel": {
+          "$ref": "#/definitions/LinkRelation"
+        },
+        "title": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "title": "Link"
+    },
+    "LinkRelation": {
+      "type": "object",
+      "title": "LinkRelation"
+    },
+    "Links": {
+      "type": "object",
+      "properties": {
+        "empty": {
+          "type": "boolean"
+        }
+      },
+      "title": "Links"
+    },
+    "ModelAndView": {
+      "type": "object",
+      "properties": {
+        "empty": {
+          "type": "boolean"
+        },
+        "model": {
+          "type": "object"
+        },
+        "modelMap": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "reference": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "ACCEPTED",
+            "ALREADY_REPORTED",
+            "BAD_GATEWAY",
+            "BAD_REQUEST",
+            "BANDWIDTH_LIMIT_EXCEEDED",
+            "CHECKPOINT",
+            "CONFLICT",
+            "CONTINUE",
+            "CREATED",
+            "DESTINATION_LOCKED",
+            "EXPECTATION_FAILED",
+            "FAILED_DEPENDENCY",
+            "FORBIDDEN",
+            "FOUND",
+            "GATEWAY_TIMEOUT",
+            "GONE",
+            "HTTP_VERSION_NOT_SUPPORTED",
+            "IM_USED",
+            "INSUFFICIENT_SPACE_ON_RESOURCE",
+            "INSUFFICIENT_STORAGE",
+            "INTERNAL_SERVER_ERROR",
+            "I_AM_A_TEAPOT",
+            "LENGTH_REQUIRED",
+            "LOCKED",
+            "LOOP_DETECTED",
+            "METHOD_FAILURE",
+            "METHOD_NOT_ALLOWED",
+            "MOVED_PERMANENTLY",
+            "MOVED_TEMPORARILY",
+            "MULTIPLE_CHOICES",
+            "MULTI_STATUS",
+            "NETWORK_AUTHENTICATION_REQUIRED",
+            "NON_AUTHORITATIVE_INFORMATION",
+            "NOT_ACCEPTABLE",
+            "NOT_EXTENDED",
+            "NOT_FOUND",
+            "NOT_IMPLEMENTED",
+            "NOT_MODIFIED",
+            "NO_CONTENT",
+            "OK",
+            "PARTIAL_CONTENT",
+            "PAYLOAD_TOO_LARGE",
+            "PAYMENT_REQUIRED",
+            "PERMANENT_REDIRECT",
+            "PRECONDITION_FAILED",
+            "PRECONDITION_REQUIRED",
+            "PROCESSING",
+            "PROXY_AUTHENTICATION_REQUIRED",
+            "REQUESTED_RANGE_NOT_SATISFIABLE",
+            "REQUEST_ENTITY_TOO_LARGE",
+            "REQUEST_HEADER_FIELDS_TOO_LARGE",
+            "REQUEST_TIMEOUT",
+            "REQUEST_URI_TOO_LONG",
+            "RESET_CONTENT",
+            "SEE_OTHER",
+            "SERVICE_UNAVAILABLE",
+            "SWITCHING_PROTOCOLS",
+            "TEMPORARY_REDIRECT",
+            "TOO_EARLY",
+            "TOO_MANY_REQUESTS",
+            "UNAUTHORIZED",
+            "UNAVAILABLE_FOR_LEGAL_REASONS",
+            "UNPROCESSABLE_ENTITY",
+            "UNSUPPORTED_MEDIA_TYPE",
+            "UPGRADE_REQUIRED",
+            "URI_TOO_LONG",
+            "USE_PROXY",
+            "VARIANT_ALSO_NEGOTIATES"
+          ]
+        },
+        "view": {
+          "$ref": "#/definitions/View"
+        },
+        "viewName": {
+          "type": "string"
+        }
+      },
+      "title": "ModelAndView"
+    },
+    "Player": {
+      "type": "object",
+      "properties": {
+        "ageJoueur": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "clubactuelleJoueur": {
+          "type": "string"
+        },
+        "equipe": {
+          "$ref": "#/definitions/Team"
+        },
+        "firstnameJoueur": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "lastnameJoueur": {
+          "type": "string"
+        },
+        "nbrbutsJoueur": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "posteJoueur": {
+          "type": "string"
+        }
+      },
+      "title": "Player"
+    },
+    "RepresentationModel«object»": {
+      "type": "object",
+      "properties": {
+        "links": {
+          "$ref": "#/definitions/Links"
+        }
+      },
+      "title": "RepresentationModel«object»"
+    },
+    "Team": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ligue": {
+          "$ref": "#/definitions/League"
+        },
+        "logo": {
+          "type": "string"
+        },
+        "nbrButs": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nbrPoints": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nbrTitres": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "nomEquipe": {
+          "type": "string"
+        }
+      },
+      "title": "Team"
+    },
+    "TemplateVariable": {
+      "type": "object",
+      "properties": {
+        "composite": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "singular": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "COMPOSITE_PARAM",
+            "DOT",
+            "FRAGMENT",
+            "PATH_SEGMENT",
+            "PATH_STYLE_PARAMETER",
+            "PATH_VARIABLE",
+            "REQUEST_PARAM",
+            "REQUEST_PARAM_CONTINUED",
+            "RESERVED_STRING",
+            "SEGMENT",
+            "SIMPLE"
+          ]
+        }
+      },
+      "title": "TemplateVariable"
+    },
+    "Trainer": {
+      "type": "object",
+      "properties": {
+        "ageEntraineur": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "clubActuelleEntraineur": {
+          "type": "string"
+        },
+        "firstnameEntraineur": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "lastnameEntraineur": {
+          "type": "string"
+        }
+      },
+      "title": "Trainer"
+    },
+    "UriTemplate": {
+      "type": "object",
+      "properties": {
+        "variableNames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "variables": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TemplateVariable"
+          }
+        }
+      },
+      "title": "UriTemplate"
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "password": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        }
+      },
+      "title": "User"
+    },
+    "View": {
+      "type": "object",
+      "properties": {
+        "contentType": {
+          "type": "string"
+        }
+      },
+      "title": "View"
+    }
+  }
+}
