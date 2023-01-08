@@ -32,16 +32,10 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
          "/v3/**",
          "/login/**",
          "/webjars/**",
-         "/ligues",
-         "/equipes",
-         "/entraineurs",
-         "/joueurs",
-         "/logins",
-         "/strongest-equipe",
-         "/weakest-equipe",
-         "/best-equipe",
-         "/oldest-player/joueurs",
-         "/top-scorer/joueurs",
+         "/teams",
+         "/trainers",
+         "/players",
+         "/leagues",
          "/"
  };
 
@@ -66,6 +60,25 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
   //this will allow frames with same origin which is much more safe
   httpSecurity.headers().frameOptions().sameOrigin();
  }
+
+ /*@Override
+ protected void configure(HttpSecurity http) throws Exception {
+  http.authorizeRequests()
+          .antMatchers("/teams").authenticated()
+          .antMatchers("/players").authenticated()
+          .antMatchers("/trainers").authenticated()
+          .antMatchers("/leagues").authenticated()
+          .anyRequest().permitAll()
+          .and()
+          .formLogin()
+          .usernameParameter("email")
+          .defaultSuccessUrl("/users")
+          .permitAll()
+          .and()
+          .logout().logoutSuccessUrl("/").permitAll();
+ }*/
+
+
 
  public void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
   authenticationManagerBuilder.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);

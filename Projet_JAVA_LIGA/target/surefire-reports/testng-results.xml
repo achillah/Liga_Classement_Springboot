@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-07T03:34:04 CET" name="Surefire suite" finished-at="2023-01-07T03:34:04 CET" duration-ms="30">
+  <suite started-at="2023-01-07T18:06:21 CET" name="Surefire suite" finished-at="2023-01-07T18:06:21 CET" duration-ms="66">
     <groups>
     </groups>
-    <test started-at="2023-01-07T03:34:04 CET" name="Surefire test" finished-at="2023-01-07T03:34:04 CET" duration-ms="30">
+    <test started-at="2023-01-07T18:06:21 CET" name="Surefire test" finished-at="2023-01-07T18:06:21 CET" duration-ms="66">
+      <class name="be.abd.helbdemo.Controller.EquipeControllerIntegrationTest">
+        <test-method signature="whenRequestGet_ThenOK()[pri:0, instance:be.abd.helbdemo.Controller.EquipeControllerIntegrationTest@158da8e]" started-at="2023-01-07T18:06:21 CET" name="whenRequestGet_ThenOK" finished-at="2023-01-07T18:06:21 CET" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whenRequestGet_ThenOK -->
+      </class> <!-- be.abd.helbdemo.Controller.EquipeControllerIntegrationTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
